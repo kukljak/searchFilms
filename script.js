@@ -34,6 +34,9 @@ inputData.addEventListener("keydown", async (event) => {
             await renderMovies(searchREsult, list);
             await list.append(btn);
         }
+        if (searchREsult.total_results <= 20) {
+            await btn.remove();
+        }
         let count = 2;
         
     btn.addEventListener("click", async (event) => {
